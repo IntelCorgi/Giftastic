@@ -22,4 +22,5 @@ JS Elements
 		- MUST GENERATE AS PAUSED, then start on click.
 	- Search bar
 		- Takes user input, and then creates a button using their input.
+			- Idea: add text to array???
 

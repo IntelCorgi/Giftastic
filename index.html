@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>JIFF TASTIC</title>
-	<script src= "http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
 
-<script type="text/javascript">
-	
-
-
-
-
-
-
-
-
-
-
-
-
+	<div id = "gif-zone">
 
 
 	
-</script>
+	</div>
+
+	<aside style="float:right;">
+		<form class="navbar-form navbar-left" role="search">
+		  <div class="form-group">
+		    <input type="text" class="form-control" placeholder="Search for some Gifs!">
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>		
+	</aside>
+
+	<script src= "http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			alert("It is pronounced JIFF")
+			//declares button names in an array
+			var topics = ["Star Wars", "Michigan State", "Corgis", "Space", "Parks and Rec", "Arrested Development", "DJ Khaled"];
+			// For loop to generate buttons in the <header>
+			for (i = 0; i < topics.length; i++){
+				$("<button>", {
+					text: [i],
+					id: "btn_" +[i]
+					//potentially add on click here
+				})
+
+
+			}
+
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
 
 </body>
 </html>
