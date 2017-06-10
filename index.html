@@ -8,8 +8,14 @@
 </head>
 <body>
 
+	<div id="btn-zone">
+
+	</div>
+
+
 	<div id = "gif-zone">
 
+		    
 
 	
 	</div>
@@ -26,19 +32,33 @@
 	<script src= "http://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript">
 		$( document ).ready(function() {
+			//states the truth
 			alert("It is pronounced JIFF")
 			//declares button names in an array
 			var topics = ["Star Wars", "Michigan State", "Corgis", "Space", "Parks and Rec", "Arrested Development", "DJ Khaled"];
 			// For loop to generate buttons in the <header>
+			
 			for (i = 0; i < topics.length; i++){
-				$("<button>", {
-					text: [i],
-					id: "btn_" +[i]
-					//potentially add on click here
-				})
-
-
+				$("#btn-zone").append('<input type="button", value= '[i]'');
+				
 			}
+
+			$("button").on("click", function() {
+		      var animal = $(this).attr("data-btn");
+		      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+		        this.topics[i] + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+		      $.ajax({
+		        url: queryURL,
+		        method: "GET"
+
+		      }).done(function(response) {
+		      var results = response.data
+		      for (var i = 0; i < results.length; i++) {
+		      	    var gifDiv = $("<div>")
+         			var p = $("<p>")
+          			p.text(results[i].rating)
+          			var gifImage = $(image)
 
 		});
 
