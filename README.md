@@ -1,5 +1,8 @@
 # Giftastic
-Generates paused gifs that animate on click
+
+This app allows users to search animal gifs that will pause on a click.
+
+--pseudocode--
 
 HTML Elements:
 	- Header that contains all the buttons at the top
